@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: Prices
+servers:
+  - url: http://localhost:8080
+paths:
+  /prices:
+    get:
+      tags:
+        - prices
+      summary: Gets the prices
+      operationId: getPrices
+      parameters:
+        - in: query
+          name: date
+          schema:
+            type: string
+            format: date-time
+          required: true
+          description: Date
+        - in: query
+          name: productId
+          schema:
+            type: integer
+          required: true
+          description: Product ID
+        - in: query
+          name: brandId
+          schema:
+            type: integer
+          required: true
+          description: Brand ID
+      responses:
+        '200':
+          description: Prices
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PriceResponse'
+        '400':
+          description: Bad request.
+        '401':
+          description: Unauthorized.
+        '404':
+          description: Not found.
+        '5XX':
+          description: Internal Server Error.
+components:
+  schemas:
+    PriceResponse:
+      type: object
+      properties:
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/PriceResource'
+      title: PriceResponse
+    PriceResource:
+      type: object
+      properties:
+        productId:
+          type: integer
+          description: Product ID
+        brandId:
+          type: integer
+          description: Brand ID
+        priceList:
+          type: integer
+          description: Price List
+        startDate:
+          type: string
+          format: date-time
+          description: Start date
+        endDate:
+          type: string
+          format: date-time
+          description: End date
+        price:
+          type: number
+          description: Price
+      title: PriceResource
