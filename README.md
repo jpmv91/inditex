@@ -9,6 +9,9 @@ Generar api:
 ./mvnw generate-sources (Linux/Unix)
 ```
 
+Si usamos Docker, tenemos el fichero Dockerfile para generar el contenedor con la app.
+
+
 Estructura de archivos:
 - prices
     - data: localización de la base de datos (h2)     
