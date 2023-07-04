@@ -28,7 +28,7 @@ class PriceAdapterControllerTest {
           "16, 21, 38.95"
   })
   void test(int dayOfMonth, int hour, BigDecimal price) {
-    var date = OffsetDateTime.of(2020, 6, dayOfMonth, hour, 0, 0, 0, ZoneOffset.UTC);
+   var date = OffsetDateTime.of(2020, 6, dayOfMonth, hour, 0, 0, 0, ZoneOffset.UTC);
     var productId = 35455;
     var brandId = 1;
 
