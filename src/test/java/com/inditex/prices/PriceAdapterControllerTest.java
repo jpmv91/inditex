@@ -41,7 +41,7 @@ class PriceAdapterControllerTest {
     assertEquals(price, result.getBody().getPrices().get(0).getPrice());
   }
 
-  //Test Case when the results are KO, becouse the brand id or product id not exists
+  //Test Case when the results are KO, because the brand id or product id not exists
   @ParameterizedTest(name = "Test {index}: petición a las {1}:00 del día {0} del producto 35455 para la brand 1 (ZARA)")
   @CsvSource({
       "14, 10, 35455, 2",
@@ -53,7 +53,7 @@ class PriceAdapterControllerTest {
     assertThrows(EntityNotFoundException.class, () -> controller.getPrices(date, productId, brandId));
   }
 
-  //Test Case when the results are KO, becouse the brand id or product id are not positive values
+  //Test Case when the results are KO, because the brand id or product id are not positive values
   @ParameterizedTest(name = "Test {index}: petición a las {1}:00 del día {0} del producto 35455 para la brand 1 (ZARA)")
   @CsvSource({
       "14, 10, 0, 2",
