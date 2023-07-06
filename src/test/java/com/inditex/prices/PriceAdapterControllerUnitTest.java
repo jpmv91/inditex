@@ -13,7 +13,7 @@ import java.time.ZoneOffset;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-class PriceAdapterControllerUnitaryTest {
+class PriceAdapterControllerUnitTest {
 
   @Autowired
   private PriceControllerAdapter controller;
