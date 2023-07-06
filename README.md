@@ -22,6 +22,7 @@ Estructura de archivos:
                     - PricesApplication: clase main
                     - adapters: controlador, esta clase implementa la api
                     - entities: clases del modelo
+                    - exceptions: paquete que contiene clases de control de excepciones
                     - mapper: mapeadores
                     - ports: interfaces a través de las cuales el sistema interactúa con el exterior (bases de datos, etc) 
                     - repository: repositorio, donde hemos utilizado una query nativa
