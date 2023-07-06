@@ -89,7 +89,7 @@ public class PriceAdapterControllerIntegrationTest {
 
   @Test
   @SneakyThrows
-  @DisplayName("Should not get price because of brand id does not exist")
+  @DisplayName("Should not get price because of brand id is not correct value")
   void testGetPrices_Case4() {
 
     ArrayList<PriceEntity> list = new ArrayList<>();
