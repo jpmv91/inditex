@@ -33,4 +33,5 @@ Estructura de archivos:
                 - swagger.yaml: archivo de definición de la API
         - test:
             - com.inditex.prices:
-                - PriceControllerTest: clase con los tests unitarios de la prueba y dos test mas para comprobar validaciones de datos y existencia de entidades
+                - PriceAdapterControllerUnitaryTest: clase con los tests unitarios de la prueba 
+                - PriceAdapterControllerIntegrationTest : clase que contiene pruebas de integración
