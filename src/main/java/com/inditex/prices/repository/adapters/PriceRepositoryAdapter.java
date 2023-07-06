@@ -21,4 +21,16 @@ public class PriceRepositoryAdapter implements PriceRepositoryPort {
   public List<PriceEntity> findPrice(OffsetDateTime date, Integer productId, Integer brandId) {
     return repository.findAllByBrandIdAndProductIdAndEndDate(date, productId, brandId);
   }
+
+  @Override
+  public boolean findProductId(Integer productId) {
+    return repository.existsByProductId(productId);
+  }
+
+  @Override
+  public boolean findBrandId(Integer brandId) {
+    return repository.existsByBrandId(brandId);
+  }
+
+
 }

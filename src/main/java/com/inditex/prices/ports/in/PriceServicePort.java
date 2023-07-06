@@ -7,4 +7,8 @@ import java.util.List;
 
 public interface PriceServicePort {
   List<PriceEntity> getPrices(OffsetDateTime date, Integer productId, Integer brandId);
+
+  boolean getProductId(Integer productId);
+
+  boolean getBrandId(Integer brandId);
 }

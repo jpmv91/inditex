@@ -19,4 +19,10 @@ public interface PriceJpaRepository extends JpaRepository<PriceEntity, Integer> 
       "order by p.priority desc")
   List<PriceEntity> findAllByBrandIdAndProductIdAndEndDate(@Param("date") OffsetDateTime date, @Param("productId") Integer productId, @Param("brandId") Integer brandId);
 
+
+
+  boolean existsByBrandId(Integer brandId);
+
+  boolean existsByProductId(Integer productId);
+
 }

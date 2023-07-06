@@ -21,4 +21,15 @@ public class PriceServiceUseCase implements PriceServicePort {
     return priceRepository.findPrice(date, productId, brandId).stream().findFirst().stream().collect(Collectors.toList());
   }
 
+  @Override
+  public boolean getProductId(Integer productId) {
+    return priceRepository.findProductId(productId);
+  }
+
+  @Override
+  public boolean getBrandId(Integer brandId) {
+    return priceRepository.findBrandId(brandId);
+  }
+
+
 }

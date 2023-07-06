@@ -9,9 +9,6 @@ Generar api:
 ./mvnw generate-sources (Linux/Unix)
 ```
 
-Si usamos Docker, tenemos el fichero Dockerfile para generar el contenedor con la app.
-
-
 Estructura de archivos:
 - prices
     - data: localización de la base de datos (h2)     
@@ -36,4 +33,4 @@ Estructura de archivos:
                 - swagger.yaml: archivo de definición de la API
         - test:
             - com.inditex.prices:
-                - PriceControllerTest: clase con los tests unitarios de la prueba
+                - PriceControllerTest: clase con los tests unitarios de la prueba y dos test mas para comprobar validaciones de datos y existencia de entidades
