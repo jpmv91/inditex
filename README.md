@@ -9,7 +9,7 @@ Generar api:
 ./mvnw generate-sources (Linux/Unix)
 ```
 
-Estructura de archivos:
+Estructura de archivos :
 - prices
     - data: localización de la base de datos (h2)     
       - Credenciales de la base de datos ( se pueden tambien ver en el application.yml)
